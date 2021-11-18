@@ -17,9 +17,27 @@ namespace SumarNumeros
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnSumar_Click(object sender, EventArgs e)
         {
-
+            Calcular();
         }
+
+        private void Calcular()
+        {
+            try
+            {
+                    int n1 = Int32.Parse(txtN1.Text);
+                    int n2 = Int32.Parse(txtN2.Text);
+                    int resultado = n1 + n2;
+
+                    labelTot.Text = Convert.ToString(resultado);
+                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error al intentar calcular, asegurate de introducir un numero");
+            }
+        }
+
     }
 }

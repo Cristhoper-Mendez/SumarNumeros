@@ -36,7 +36,7 @@ namespace SumarNumeros
             this.n2 = new System.Windows.Forms.Label();
             this.btnSumar = new System.Windows.Forms.Button();
             this.labelTotal = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.labelTot = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtN1
@@ -61,7 +61,6 @@ namespace SumarNumeros
             this.titulo.Size = new System.Drawing.Size(112, 13);
             this.titulo.TabIndex = 2;
             this.titulo.Text = "Suma de dos numeros";
-            this.titulo.Click += new System.EventHandler(this.label1_Click);
             // 
             // n1
             // 
@@ -89,6 +88,7 @@ namespace SumarNumeros
             this.btnSumar.TabIndex = 5;
             this.btnSumar.Text = "Calcular";
             this.btnSumar.UseVisualStyleBackColor = true;
+            this.btnSumar.Click += new System.EventHandler(this.btnSumar_Click);
             // 
             // labelTotal
             // 
@@ -99,19 +99,20 @@ namespace SumarNumeros
             this.labelTotal.TabIndex = 6;
             this.labelTotal.Text = "Total";
             // 
-            // txtTotal
+            // labelTot
             // 
-            this.txtTotal.Location = new System.Drawing.Point(94, 128);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(100, 20);
-            this.txtTotal.TabIndex = 7;
+            this.labelTot.AutoSize = true;
+            this.labelTot.Location = new System.Drawing.Point(110, 135);
+            this.labelTot.Name = "labelTot";
+            this.labelTot.Size = new System.Drawing.Size(0, 13);
+            this.labelTot.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 217);
-            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.labelTot);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.btnSumar);
             this.Controls.Add(this.n2);
@@ -120,7 +121,7 @@ namespace SumarNumeros
             this.Controls.Add(this.txtN2);
             this.Controls.Add(this.txtN1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sumar numeros";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,7 +136,7 @@ namespace SumarNumeros
         private System.Windows.Forms.Label n2;
         private System.Windows.Forms.Button btnSumar;
         private System.Windows.Forms.Label labelTotal;
-        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label labelTot;
     }
 }
 
